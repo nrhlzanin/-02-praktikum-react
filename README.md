@@ -162,8 +162,36 @@ function App() {
 ### Menggunakan Props untuk Mengirim Data 
 1. Buat file baru di direktori src dengan nama Greeting.js. 
 2. Tambahkan kode berikut untuk membuat komponen Greeting yang menerima props: 
+```bash
+import React, { useState } from 'react';
+
+function Greeting(props) {
+    return <h1>Halo, {props.name}</h1>;
+}
+
+export default Greeting;
+
+```
 3. Buka file src/App.js dan impor komponen Greeting: 
+```bash
+import Greeting from './Greeting';
+
+```
 4. Tambahkan komponen Greeting ke dalam komponen App dan kirim props name: 
+```bash
+function App() {
+  return (
+    <div>
+      <Header />
+      <Main />
+      <Greeting name="Nindy" />
+      <Counter />
+      <Footer />
+    </div>
+  );
+}
+
+```
 5. Simpan file dan lihat perubahan di browser. Anda akan melihat pesan "Halo, John!" yang 
 ditampilkan oleh komponen Greeting. 
 

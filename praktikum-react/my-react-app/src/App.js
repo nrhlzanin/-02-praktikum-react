@@ -1,5 +1,6 @@
 import React from 'react';
 import Counter from './Counter';
+import Greeting from './Greeting';
 
 // Komponen Header
 function Header() {
@@ -35,6 +36,7 @@ function App() {
     <div>
       <Header />
       <Main />
+      <Greeting name="Nindy" />
       <Counter />
       <Footer />
     </div>
