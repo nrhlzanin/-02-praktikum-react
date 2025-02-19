@@ -195,16 +195,77 @@ function App() {
 5. Simpan file dan lihat perubahan di browser. Anda akan melihat pesan "Halo, John!" yang 
 ditampilkan oleh komponen Greeting. 
 
-> ![Screenshot](assets-report/04png)
+> ![Screenshot](assets-report/04.png)
 > 
-> Berhasil melaukan pembuatan aplikasi react secara lokal dan membuka di browser
+> Berhasil melaukan pengiriman data dengan props
 
 ### Menggunakan State untuk Mengelola Data 
 1. Buka file src/App.js dan tambahkan kode berikut untuk membuat komponen yang mengelola state: 
+```bash 
+import React, {useState} from 'react';
+
+function Example() {
+  const [name, setName] = useState("");
+  const [age, setAge] = useState(0);
+  const [email, setEmail] = useState("");
+
+  const handleNameChange = (e) => {
+    setName(e.target.value);
+  };
+
+  const handleAgeChange = (e) => {
+    setAge(e.target.value);
+  };
+
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  };
+
+  return (
+    <div>
+      <input
+        type="text"
+        placeholder="Nama"
+        value={name}
+        onChange={handleNameChange}
+      />
+      <input
+        type="number"
+        placeholder="Umur"
+        value={age}
+        onChange={handleAgeChange}
+      />
+      <input
+        type="email"
+        placeholder="Email"
+        value={email}
+        onChange={handleEmailChange}
+      />
+      <p>
+        {name} berumur {age} tahun dan emailnya adalah {email}.
+      </p>
+    </div>
+  );
+}
+```
 2. Tambahkan komponen Example ke dalam komponen App: 
+```bash 
+function App() {
+  return (
+    <div>
+      <Header />
+      <Main />
+      <Greeting name="Nindy" />
+      <Counter />
+      <Example />
+      <Footer />
+    </div>
+  );
+}
+
+```
 3. Simpan file dan lihat perubahan di browser. Anda akan melihat form input yang dapat mengupdate state dan menampilkan data yang dimasukkan. 
 
 > ![Screenshot](assets-report/05.png)
 > 
-> Berhasil melaukan pembuatan aplikasi react secara lokal dan membuka di browser
-
+> Berhasil melaukan pembuatan form input yang dapat mengupdate state dan menampilkan data yang dimasukkan
