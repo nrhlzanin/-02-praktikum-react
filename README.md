@@ -269,3 +269,12 @@ function App() {
 > ![Screenshot](assets-report/05.png)
 > 
 > Berhasil melaukan pembuatan form input yang dapat mengupdate state dan menampilkan data yang dimasukkan
+
+## Tugas 
+1. Buat komponen baru bernama TodoList yang menampilkan daftar tugas (todo list). Gunakan state untuk mengelola daftar tugas dan props untuk mengirim data tugas ke komponen anak. 
+2. Tambahkan fitur untuk menambahkan tugas baru ke dalam daftar menggunakan form input. 
+3. Implementasikan fitur untuk menghapus tugas dari daftar. 
+
+> ![Screenshot](assets-report/06.png)
+> 
+> Berhasil membuat todo list yang menampilkan daftar tugas yang bisa ditambahkan dan dihapus
